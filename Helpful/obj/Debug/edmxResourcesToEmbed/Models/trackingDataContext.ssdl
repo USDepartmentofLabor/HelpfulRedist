@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FeedbackScript.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="FeedbackScriptStoreContainer">
+    <EntitySet Name="Comments" EntityType="FeedbackScript.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Responses" EntityType="FeedbackScript.Store.Responses" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="Agency" Type="varchar" MaxLength="100" />
+    <Property Name="UtcDate" Type="datetime" Nullable="false" />
+    <Property Name="Positive" Type="bit" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="Responses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="Agency" Type="varchar" MaxLength="100" />
+    <Property Name="UtcDate" Type="datetime" Nullable="false" />
+    <Property Name="Positive" Type="bit" />
+  </EntityType>
+</Schema>

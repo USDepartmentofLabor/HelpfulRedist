@@ -1,0 +1,849 @@
+@charset "utf-8";
+/* CSS Document */
+
+a.skipster {
+	height:1px;
+	left:-9999em;
+	overflow:hidden;
+	position:absolute;
+	text-align:left;
+	top:-9999em;
+	width:1px;
+	font-size:1em;
+}
+
+a.skipster:active,a.skipster:focus,a.skipster:hover {
+	background-color:#fff;
+	color:#000;
+	font-size:1em;
+	height:auto;
+	left:0;
+	overflow:auto;
+	top:0;
+	width:99%;
+	z-index:100;
+	padding:.2em;
+}
+
+* {
+	margin:0;
+}
+
+body {
+	font-family:tahoma;
+	background-color:#B4B4B4;
+	color: #000;
+}
+
+img {
+	border:none;
+}
+
+p {
+	font-size:80%;
+	margin-left:10px;
+	margin-bottom:5px;
+	padding:3px;
+}
+
+blockquote {
+	margin-left:25px;
+	margin-right:25px;
+}
+
+td.tabletitle {
+	background-color:#FFF;
+}
+
+/* ==|== list styles =======================================================
+   list styles that e/affect most lists on dol.gov
+   ========================================================================== */
+
+li {
+	font-size:80%;
+	margin-bottom:4px;
+}
+
+li li { font-size: 100%; }
+ol ol ul{ font-size:100%; }
+
+ol {
+	font-size:100%;
+	margin-left:20px;
+	padding-left:16px;
+}
+
+ul {
+	list-style-position:outside;
+	list-style-image:url(/images/bullet-gray.gif);
+	margin-left:20px;
+	font-size:100%;
+	margin-bottom:7px;
+	padding-left:10px;
+}
+
+ol p {
+	margin-left:-5px;
+	font-size:80%; 
+}
+
+ol ol p {
+	margin-left:-5px;
+	font-size:100%; 
+}
+
+.item-nested {
+font-size:100%;
+}
+
+/* Lists ends **************************************************
+******************************************************** */
+
+h1 {
+color:#003399;
+font-weight:600;
+font-size:140%;
+margin-left:10px;
+margin-bottom:5px;
+padding:3px;
+}
+
+h2 header-topic {
+color:#900;
+font-weight:500;
+font-size:120%;
+margin-left:10px;
+margin-bottom:5px;
+padding:3px;
+}
+
+h2 {
+color:#000;
+font-weight:600;
+font-size:125%;
+margin-left:10px;
+margin-bottom:5px;
+padding:3px;
+}
+
+h3 {
+color:#000;
+font-weight:550;
+font-size:105%;
+margin-left:10px;
+margin-bottom:7px;
+padding:3px;
+}
+
+h4{ color:#000; 
+font-weight:bold; 
+font-size:95%; 
+margin-left:10px; 
+padding:3px; 
+margin-bottom:7px;  
+}
+
+.headermed {
+color:#039;
+font-weight:lighter;
+font-size:160%;
+margin-left:-5px;
+margin-bottom:5px;
+padding:3px;
+}
+
+.headermedred {
+color:#900;
+font-size:140%;
+font-weight:700;
+}
+
+.headersm {
+color:#000;
+font-weight:700;
+font-size:120%;
+}
+
+.header-topic {
+color:#900;
+font-weight:700;
+font-size:15px;
+}
+
+.captiontext {
+color:#000;
+font-weight:700;
+font-size:11px;
+}
+
+.boxtitle2 {
+background-image:url(//www.dol.gov/images/HorizontalGrad.jpg);
+}
+
+.highlights-hidden {
+visibility:hidden;
+display:none;
+}
+
+.menu-header {
+color:#900;
+font-size:300%;
+font-weight:700;
+margin-bottom:5px;
+margin-top:10px;
+border-top-color:#E5E5E5;
+border-top-style:solid;
+border-top-width:1px;
+padding-top:inherit;
+float:left;
+text-align:left;
+}
+
+.more {
+font-size:8pt;
+font-weight:700;
+color:#666;
+}
+
+.more a {
+color:#666;
+}
+
+.more a:active,.more a:focus,.more a:hover {
+color:#000;
+}
+
+.navlinks {
+text-align:left;
+padding-top:3px;
+font-weight:700;
+color:#FFF;
+}
+
+.overline {
+border-bottom:3.5px groove #000;
+}
+
+.panel {
+margin-top:10px;
+color:#636363;
+font-size:8pt;
+overflow:auto;
+clear:left;
+padding:5px;
+}
+
+.sec-menu-header {
+margin-left:7px;
+font-size:8pt;
+color:#900;
+font-weight:700;
+}
+
+span {
+font-size:8pt;
+color:#636363;
+}
+
+.stats {
+padding-bottom:3px;
+padding-top:3px;
+padding-left:5px;
+font-size:9pt;
+text-align:left;
+}
+
+.title a {
+text-decoration:none;
+font-weight:700;
+color:#636363;
+}
+
+.tools a {
+text-decoration:none;
+color:#666;
+}
+
+ul.menu-item {
+color:#666;
+font-size:100%;
+margin-left:30px;
+list-style:square #039;
+padding:0;
+}
+
+.underline {
+border-bottom:1px groove #000;
+}
+
+.utilitybarleft {
+text-align:left;
+color:#000;
+float:left;
+font-weight:700;
+width:50%;
+}
+
+.utilitybarright {
+text-align:right;
+color:#636363;
+float:right;
+width:50%;
+}
+
+.utilitybarright a {
+color:#636363;
+text-decoration:none;
+}
+
+#Header {
+background: #900 url(//www.dol.gov/images/RedVerticalGrad.jpg) repeat-x 0 0;
+height:79px;
+width:984px;
+text-align:center;
+}
+
+#Header a {
+	color: #fff;
+}
+
+#Banner {
+width:400px;
+height:79px;
+float:left;
+display:inline;
+background-image:url("//www.dol.gov/images/Banner.gif");
+background-repeat:no-repeat;
+overflow:hidden;
+cursor:pointer;
+background-position:0 0;
+margin:0;
+}
+
+#Banner p {
+text-indent:-9999em;
+width:400px;
+height:79px;
+}
+
+#Banner p a {
+display:block;
+width:100%;
+height:100%;
+}
+
+#Footer {
+margin-left:auto;
+margin-right:auto;
+width:984px;
+clear:both;
+font-size:72%;
+}
+
+#FooterContact {
+background-color:#e3e3e3;
+margin-left:0;
+margin-top:0;
+height:36px;
+margin-bottom:0;
+float:left;
+display:inline;
+overflow:hidden;
+text-align:center;
+vertical-align:middle;
+width:984px;
+}
+
+#FooterContactContainer {
+margin-top:5px;
+}
+
+#FooterContactContainer a:active,#FooterContactContainer a:focus,#FooterContactContainer a:hover {
+text-decoration:underline;
+color:#000;
+}
+
+#FooterMenu {
+background-color:#900;
+margin-left:0;
+margin-top:0;
+width:984px;
+height:29px;
+margin-bottom:0;
+float:left;
+display:inline;
+overflow:hidden;
+font-weight:700;
+color:#FFF;
+text-align:center;
+vertical-align:middle;
+}
+
+#FooterMenuContainer {
+margin-top:9px;
+}
+
+#FooterMenuContainer a {
+color:#FFF;
+text-decoration:none;
+}
+
+#FooterMenuContainer a:active,#FooterMenuContainer a:focus,#FooterMenuContainer a:hover {
+color:#FFF;
+text-decoration:underline;
+}
+
+#LeftColumn {
+float:left;
+width:330px;
+margin-top:0;
+margin-left:0;
+padding-right:5px;
+border:0 solid #f0f0f0;
+}
+
+#Main {
+width:984px;
+background-color:#FFF;
+background-image:url(//www.dol.gov/images/VerticalGrad.jpg);
+background-repeat:repeat-x;
+margin:0 auto;
+}
+
+#Nav {
+margin-left:0;
+margin-top:0;
+width:464px;
+height:22px;
+margin-bottom:0;
+float:left;
+display:inline;
+overflow:hidden;
+}
+
+.nobullet {
+list-style:none;
+list-style-image:none;
+}
+
+.nonselectedTab {
+background:none;
+}
+
+#RightColumn {
+width:510px;
+margin-right:5px;
+float:right;
+font-size:77%;
+margin-top:10px;
+margin-left:2px;
+}
+
+.selectedTab {
+background-color:#fff;
+background-position:left;
+background-repeat:no-repeat;
+}
+
+#ToolsContent {
+background-color:#FFF;
+margin-left:8px;
+margin-top:0;
+width:276px;
+margin-bottom:0;
+float:left;
+display:inline;
+overflow:hidden;
+letter-spacing:.1px;
+}
+
+#ToolsHeader {
+text-align:left;
+margin-left:8px;
+margin-top:8px;
+width:160px;
+margin-bottom:0;
+float:left;
+display:inline;
+vertical-align:bottom;
+padding:4px;
+}
+
+#tooltip {
+position:absolute;
+width:150px;
+border:1px solid #000;
+background-color:#FFFFE0;
+visibility:hidden;
+z-index:100;
+
+}
+
+#leftnav {
+padding-right:5px;
+border:0 solid #f0f0f0;
+float:left;
+overflow:hidden;
+background-color:#F7F7F7;
+margin-left:-974px;
+margin-top:7px;
+width:165px;
+}
+
+input.subscribeButton {
+margin-left:2px;
+margin-top:1px;
+}
+
+input.subscribeText {
+width:152px;
+font-size:11px;
+float:left;
+}
+
+input.searchButton {
+margin-left:2px;
+margin-top:5px;
+}
+
+input.searchText {
+width: 15em; 
+float:left;
+margin-top:4px;
+}
+
+#Subscribe {
+font-size:8pt;
+text-align:left;
+margin-left:0;
+margin-bottom:0;
+width:230px;
+height:40px;
+float:left;
+display:inline;
+color:#FFF;
+}
+
+#SubscribeForm {
+padding-top:1px;
+}
+
+#Subscribelabel {
+font-size:8pt;
+color:#f6f6f6;
+padding-bottom:5px;
+}
+
+#Subscribelabel a {
+font-size:8pt;
+color:#f6f6f6;
+padding-top:1px;
+}
+
+#Search {
+text-align:left;
+margin-left:0;
+margin-bottom:0;
+width:266px;
+height:40px;
+float:right;
+display:inline;
+color:#fff;
+}
+
+#searcharea {
+margin-top:-5px;
+height:500px;
+}
+
+#agencyname {
+margin-left:10px;
+text-align:left;
+color:#000;
+padding-left:5px;
+}
+
+#agencyname a {
+color:#000;
+font-weight:700;
+padding-left:5px;
+}
+
+#content {
+float:left;
+display:inline;
+text-align:left;
+margin-left:10px;
+background-color:#FFF;
+color:#000;
+margin-right:10px;
+margin-top:7px;
+padding:7px;
+}
+
+#imagestrip {
+background-color:#FFF;
+font-size:8pt;
+margin-left:592px;
+height:824px;
+}
+
+#imagestrip a {
+text-decoration:none;
+color:#303030;
+}
+
+#leftnav H2 {
+color:#900;
+font-size:80%;
+font-weight:700;
+margin-top:10px;
+margin-bottom:5px;
+border-top:1px solid #E5E5E5;
+padding:0;
+}
+
+#rightnav {
+float:right;
+overflow:hidden;
+background-color:#F7F7F7;
+margin-top:0;
+width:170px;
+}
+
+#rightnav ul {
+margin-left:15px;
+padding-left:10px;
+}
+
+#UtilityBar {
+background-image:url(/images/utilbar.gif);
+background-repeat:repeat-x;
+margin-left:10px;
+margin-right:10px;
+height:28px;
+width:964px;
+font-size:80%;
+color:#636363;
+}
+
+#UtilityBar img {
+vertical-align:bottom;
+}
+
+a[href],
+li a,
+ol a,
+p a,
+ul a {
+	color: #039;
+	text-decoration: underline;
+}
+
+a[href]:active,
+a[href]:focus,
+a[href]:hover,
+ul.menu-item a:active,
+ul.menu-item a:focus,
+ul.menu-item a:hover,
+.utilitybarright a:active,
+.utilitybarright a:focus,
+.utilitybarright a:hover {
+	color:#000;
+	text-decoration:underline;
+}
+
+a[name],
+a[name]:visited,
+a[name]:active,
+a[name]:focus,
+a[name]:hover,
+.navlinks a {
+	text-decoration:none;
+}
+
+li a:active,
+li a:focus,
+li a:hover,
+ol a:active,
+ol a:focus,
+ol a:hover,
+p a:active,
+p a:focus,
+p a:hover,
+ul a:active,
+ul a:focus,
+ul a:hover,
+.menu-header a:active,
+.menu-header a:focus,
+.menu-header a:hover,
+.sec-menu-header a:active,
+.sec-menu-header a:focus,
+.sec-menu-header a:hover,
+#leftnav H2 a:active,
+#leftnav H2 a:focus,
+#leftnav H2 a:hover {
+color:#900;
+text-decoration:underline;
+}
+
+ol a:visited,
+p a:visited,
+ul a:visited {
+color:purple;
+text-decoration:underline;
+}
+
+
+.box-title {
+color:#f3f3f3;
+background-color: #900;
+text-align:center;
+font-size:80%;
+font-weight:700;
+}
+
+.box-title a {
+color:#f3f3f3;
+font-size:80%;
+font-weight:700;
+}
+
+/* the Aside: aka: the Content Text-Boxes */
+.aside {
+	float: right;
+	width:40%;
+	min-width: 40%;
+	clear:both;
+	margin: 0 0 1em 1em;
+	border: 1px solid #900;
+}
+.aside h2 {
+	background: #900 url(/images/shadow-bot-wh.gif) repeat-x left bottom;
+	color: #fff;
+	font-size: 80%;
+	text-align:center;
+	margin:0;
+	padding: 0 0 1em 0;
+}
+
+/* END the Aside */
+
+.alignright {
+    float: right;
+    margin: 1em 0 0 1em;
+}
+.alignleft {
+    float: left;
+    margin: 1em 1em 0 0;
+}
+
+
+.menu-header a,.sec-menu-header a,#leftnav H2 a {
+color:#900;
+text-decoration:none;
+}
+
+.navlinks a:active,.navlinks a:focus,.navlinks a:hover,.utilitybarleft a,.utilitybarleft a:active,.utilitybarleft a:focus,.utilitybarleft a:hover,#imagestrip a:active,#imagestrip a:focus,#imagestrip a:hover {
+text-decoration:underline;
+}
+
+.title,#UtilityBar a {
+text-decoration:none;
+color:#636363;
+}
+
+ul.menu-item a,ul.menu-item a:visited {
+color:#666;
+text-decoration:none;
+}
+
+/*------------------------------------*\
+   The Back to Top links
+      This fix/addition changes the adjacent link and image issue with Section 508
+\*------------------------------------*/
+
+.tothetop {
+	font-weight: bold;
+	font-size: 70%;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	line-height: 18px;
+}
+
+.tothetop a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.tothetop a i {
+	display: inline-block;
+	width: 28px;
+	vertical-align: text-middle;
+	background-image: url("/images/topdoc.gif");
+	background-position: 0;
+	background-repeat: no-repeat;
+}
+
+/* Legacy back to top link CSS. This needs to be phased out and deleted. */
+
+	.backtotop {
+		color:#039;
+		font-weight:700;
+		font-size:70%;
+		margin-bottom:10px;
+		margin-top:15px;
+	}
+
+/* @end */
+
+/*------------------------------------*\
+   The Breadcrumb rules
+      This fix/addition changes the breadcrumbs being contained in a table & its issue with Section 508
+\*------------------------------------*/
+
+.crumb-links {
+	font-size: 75%;
+	margin-left: 26px;
+}
+
+.crumb-links a {
+	color: #333;
+}
+
+.crumb-links a:active,.crumb-links a:focus,.crumb-links a:hover {
+	color:#000;
+}
+
+/* @end */
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+
+   ========================================================================== */
+@media print {
+
+* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+body { font: 100%/1.3 Tahoma,Helvetica,Verdana,Arial,sans-serif; }
+a, a:visited { text-decoration: underline }
+abbr[title]:after { content: " (" attr(title) ")"; }
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; } /* h5bp.com/t */
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+p, h2, h3, h4, h5, h6 { orphans: 3; widows: 3; }
+h2, h3, h4, h5, h6 { page-break-after: avoid; }
+h1 { margin: 0 0 1em 0; padding: 0; }
+h2, h3, h4, h5, h6 { margin: .5em 0 0 0; padding: 0; }
+p { margin: 0 0 1em 0; padding: 0; }
+ol { margin: 0 0 0 1em; padding: 0; }
+ul { margin: 0 0 0 1em; padding: 0; list-style: square outside none; }
+li  { margin: 0 0 1em 0; padding: 0; }
+
+#Main { margin: 0; width: 100%; }
+#content{display:block;float:none;margin:0 !important;padding:0;}
+
+#Header,#ToolsHeader,#ToolsContent,#subscribe,#search,#footer,#utilitybar,#breadcrumb,#leftnav,#rightnav,#Banner,#RightColumn,#Subscribe,#Subscribelabel,#SubscribeForm,#Search,#SearchForm,#Searchlabel,#Nav,#agencyname,.crumb-links,.hidePrint,.navlinks,#FooterMenu,#FooterMenuContainer,#FooterContactContainer,#FooterContact,#utilitybarright,#Tools,#utilitybarleft,#fbcontent,.backtotop{display:none}
+
+}

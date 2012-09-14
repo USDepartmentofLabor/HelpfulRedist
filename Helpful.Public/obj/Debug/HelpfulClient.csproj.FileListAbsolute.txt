@@ -1,0 +1,5 @@
+C:\ASPCK\GIT\FeedbackScript\HelpfulClient\bin\HelpfulClient.dll
+C:\ASPCK\GIT\FeedbackScript\HelpfulClient\bin\HelpfulClient.pdb
+C:\ASPCK\GIT\FeedbackScript\HelpfulClient\obj\Debug\ResolveAssemblyReference.cache
+C:\ASPCK\GIT\FeedbackScript\HelpfulClient\obj\Debug\HelpfulClient.dll
+C:\ASPCK\GIT\FeedbackScript\HelpfulClient\obj\Debug\HelpfulClient.pdb

@@ -1,0 +1,8 @@
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\bin\FeedbackScript.Admin.dll
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\bin\FeedbackScript.Admin.pdb
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\bin\ConnectionManager.dll
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\bin\EntityFramework.dll
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\bin\EntityFramework.xml
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\obj\Release\ResolveAssemblyReference.cache
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\obj\Release\FeedbackScript.Admin.dll
+C:\ASPCK\DOL\Projects\FeedbackScript\FeedbackScript.Admin\obj\Release\FeedbackScript.Admin.pdb

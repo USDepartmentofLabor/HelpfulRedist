@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FeedbackScript" Class="FeedbackreportsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=FPDBMS14v;Initial Catalog=Feedbackscript;Persist Security Info=False;User ID=FeedbackAdmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="FeedbackScriptConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Responses" Member="Responses">
+    <Type Name="Response">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="UtcDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Positive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Audit_Logs" Member="Audit_Logs">
+    <Type Name="Audit_Log">
+      <Column Name="Log_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Log_Datetime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_identity" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="User_Action" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="User_Parameters" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Event_Result" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spGetTopPages" Method="spGetTopPages">
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spGetTopPagesResult">
+      <Column Name="Agency" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="VolumeOfFeedback" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Positive" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Negative" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mean" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spSummaryPages" Method="spSummaryPages">
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSummaryPagesResult">
+      <Column Name="Agency" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VolumeOfFeedback" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Positive" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSearchPages" Method="spGetSearchPages">
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="URLContains" Parameter="uRLContains" Type="System.String" DbType="VarChar(1024)" />
+    <Parameter Name="SelectedAgency" Parameter="selectedAgency" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="spGetSearchPagesResult">
+      <Column Name="URL" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="Agency" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VolumeOfFeedback" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Positive" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PositiveNoOfComments" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NegativeNoOfComments" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetComments" Method="spGetComments">
+    <Parameter Name="URL" Parameter="uRL" Type="System.String" DbType="NVarChar(1024)" />
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spGetCommentsResult">
+      <Column Name="utcDate" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PostiveComments" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NegativeComments" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAgencyList" Method="spGetAgencyList">
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spGetAgencyListResult">
+      <Column Name="Agency" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTrendResults" Method="spGetTrendResults">
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="URLContains" Parameter="uRLContains" Type="System.String" DbType="VarChar(1024)" />
+    <Parameter Name="SelectedAgency" Parameter="selectedAgency" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UnitType" Parameter="unitType" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="CustomOrder" Parameter="customOrder" Type="System.Char" DbType="Char(1)" />
+    <ElementType Name="spGetTrendResultsResult">
+      <Column Name="Unit" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="VolumeOfFeedback" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PositiveNoOfComments" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NegativeNoOfComments" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

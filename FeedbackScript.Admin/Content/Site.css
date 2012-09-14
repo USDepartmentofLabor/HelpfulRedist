@@ -1,0 +1,745 @@
+﻿
+body{
+	font-family:Verdana;
+	font-size:.8em;
+}
+
+.content{
+	font-size: 10pt;
+	font-family: 'Verdana';
+ }
+ 
+.grid{
+	width:100%;
+	border-width: 1px;
+	border-style: outset;
+	border-color: black;
+	border-collapse: collapse;
+}
+
+.title{
+	margin-bottom: 3;
+	font-size: 12pt;
+ 	color: #990000;
+	font-weight:bold;
+	padding: 14 0 10 12;
+}
+
+.header {
+	font-size: 10pt;
+	color:#000000;
+	vertical-align:top;	
+	border-color:#ffffff;
+}
+
+.header a {
+	color:#0000FF;
+}
+
+#footer
+{
+    width:960px;
+    border-style:solid; 
+    border-color:black; border-width:1px;
+    color: #ffffff; background-color: #333399;
+    text-align: left;
+	padding: 4 4 4 4;
+}
+
+#menu2 li 
+ {
+    display:none ;
+    padding: 0 0 0 0;
+ }
+ 
+#menu2 ul.parentList
+{
+    text-align:left;
+    background-color:#333399;
+    color:White;
+    padding-bottom: 0;
+    padding-left: .1em;
+    padding-right: 0;
+    padding-top: 0;
+	margin:0 0 0 0;
+}
+
+#static {
+	color:#0000FF;
+	text-align:right;
+	border-left-style:none;
+	margin-left:750;
+ 	margin-bottom:1;
+	padding-left:0;
+}
+
+#menu2 ul.parentList li a
+{
+    color:#FFFFFF;
+}
+
+#menu2 ul.parentList li.current a
+ {
+     font-weight:bold;
+     color:#FFCF00;  
+ }
+ 
+#toolsmenu li 
+{
+    display: inline;
+}
+#toolsmenu ul.parentList
+{
+    text-align:left;
+    background-color:#EFF3FF;
+    color:#333399;
+    padding: 4 4 4 4;
+	margin:0 0 0 0;
+}
+
+#toolsmenu ul.parentList li a
+{
+    color:#333399;
+}
+
+#toolsmenu ul.parentList li.current a
+{
+    font-weight:bold;
+    color:#333399;  
+}
+
+#reportsmenu li 
+{
+    display: inline;
+}
+#reportsmenu ul.parentList
+{
+    text-align:left;
+    background-color:#EFF3FF;
+    color:#333399;
+    padding: 4 4 4 4;
+	margin:0 0 0 0;
+}
+
+#reportsmenu ul.parentList li a
+{
+    color:#333399;
+}
+
+#reportsmenu ul.parentList li.current a
+{
+    font-weight:bold;
+    color:#333399;  
+}
+
+.action {
+	width:100px;
+	font-size: 10pt;
+	color:#FFFFFF;
+	vertical-align:top;
+	text-align:center;	
+	border-color:#ffffff;
+}
+
+fieldset { 
+	margin:0;  
+	padding: 0; 
+	border-style: none; 
+}
+
+
+fieldset label strong
+{
+	color: Red;
+}
+
+
+
+
+.labelDateTo
+{
+    left:150px;
+    font-size:10pt; 
+	vertical-align: top; 
+  	text-align:left; 
+  	position:relative
+ }
+
+.labelDateFrom
+{
+    font-size:10pt; 
+	vertical-align: top; 
+  	text-align:left; 
+ }
+
+.label{
+	font-size:10pt; 
+	font-weight:bold;
+	vertical-align: top; 
+  	text-align:left;
+}
+.biglabel{
+	font-size:11pt; 
+	font-weight:bold;
+	vertical-align: top; 
+  	text-align:left;
+}
+
+td.lbl1{
+	vertical-align: top; 
+  	text-align:right;
+	width:30;
+ }
+ 
+th
+{
+	height:30px;
+	text-align:left;
+	background-color:#999999;
+ }
+
+.btn{
+	font-weight: normal;
+	font-size: 10pt;
+  	width: 130px;
+    font-style: normal;
+	font-family: 'Verdana';
+	height: 25px;
+	text-align: center;  
+}
+.btnLink{
+	text-align:left;
+	background:white;
+	border:0;
+	text-decoration:underline;
+	color:#0000ff;
+}
+.btnLinkforTh{
+	text-align:left;
+	background:#cccccc;
+	border:0;
+	text-decoration:underline;
+	color:blue;
+}
+.lblLink{
+	text-align:center;
+	border:0;
+	color:#0000ff;
+}
+.btnBold{
+	text-align:center;
+	border:0;
+	color:#0000ff;
+	font-weight:bolder;
+	background-color:#cccccc;
+}
+.btnImageLink{
+	text-align:left;
+	background:white;
+	border:0;
+}
+
+.dropDown{
+	width: 180px; 
+	height: 22px; 
+	font-family: 'Verdana';
+}
+
+
+.input-validation-error
+{
+	border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.field-validation-error, .validation-summary-errors
+{
+	color: Red;
+	font-weight: bolder;
+}
+
+
+.textBox{
+	font-family: 'Verdana';
+	width: 175px; 
+	height: 22px; 
+	font-size: 10pt;
+	border-top-style: inset;
+	border-left-width:2;
+	border-top-width:2;
+	border-left-style: inset;
+}
+
+.errorMsg{
+	font-size: 10pt;
+	color: #ff0000; 
+}.headerbig {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.headermed {
+  color: #990000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: lighter;
+}
+
+h1 {
+  color: #990000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: lighter;
+  text-align:left;
+}
+
+h2
+{
+	color: Black;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size:100%
+}
+
+.headersm {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.headerhalloffame {
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:140%;
+font-weight: bold;
+}
+
+.header-topic {
+  color: #990000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+table.data {
+	font-family:'Arial';
+	font-size:10pt;
+	border-width: 1px;
+	border-color: black;
+	border-collapse: collapse;
+	background-color: white;
+	text-align:center;
+}
+table.data th {
+	border-width: 1px;
+	padding: 2px;
+	border-style:none  ;
+	border-color: white;
+	background-color:#cccccc;
+	text-align:left;
+	border-right-style:double;
+}
+table.data td {
+	border-width: 1px;
+	padding: 1px;
+	border-style: none;
+	border-color: White;
+	text-align:left;
+	height:25px;
+	border-right-style:double;
+}
+table.data td.dataright {
+	border-width: 1px;
+	padding: 1px;
+	border-style: none;
+	border-color: White;
+	text-align:right;
+	height:25px;
+	border-right-style:double;
+}
+table.data th.dataright {
+	border-width: 1px;
+	padding: 1px;
+	border-style: none;
+	border-color: White;
+	text-align:right;
+	height:25px;
+	border-right-style:double;
+}
+table.data td.datacenter {
+	border-width: 1px;
+	padding: 1px;
+	border-style: none;
+	border-color: White;
+	text-align:center;
+	height:25px;
+	border-right-style:double;
+}
+#LinksTable
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 100%;
+	width:45em;
+	margin-top:0.5em;
+	vertical-align:middle;
+}
+
+.labelHeader
+{
+	color: Black;
+	font-family: Verdana;
+	font-size: 100%;
+	font-weight: bold;
+}
+.labelHeaderTop
+{
+	color: Black;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size:110%
+}
+
+.SelectionPanelHeader
+{
+	color: Black;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size:100%
+}
+
+
+
+
+.labelHeaderSimple
+{
+	 font-family:'Verdana'; 
+	 color:#000000; 
+	 font-size:13px;
+}
+.TextBox1
+{
+	font-family:Verdana, Arial, Sans-Serif;
+	position:relative;
+	left:2.3em;
+	margin-bottom:-0.5em;
+	border-top-style: inset;
+border-left-width:2;
+border-top-width:2;
+border-left-style: inset;
+}
+
+.ListBox1
+{
+	position:relative;
+	left:2.3em;
+	width: auto;
+	margin-bottom:1em;
+	margin-top:0.3em;
+}
+.ListBox2
+{
+	position:relative;
+	width: 250px;
+}
+.ListBox3
+{
+	position:relative;
+	width: 350px;
+	height:250px
+}
+.ListBox4
+{
+	position:relative;
+	width: 100px;
+	margin-top:auto;
+}
+
+.TextBox3
+{
+	position:absolute;
+	left:18em;
+	border-style:none;
+	border-width:0;
+	font-family:Verdana, Arial, Sans-Serif;
+	font-size: 100%;
+	width:20em;
+	border-top-style: inset;
+}
+
+.TextArea1
+{
+	font-family:Verdana, Arial, Sans-Serif;
+	position:relative;
+	left:2.3em;
+	margin-bottom:-0.5em;
+	border-top-style: inset;
+	border-left-width:2;
+	border-top-width:2;
+	border-left-style: inset;
+	
+	width:50%;
+	
+	
+}
+
+.btn2
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	position:relative;
+	left:0em;
+	width: 100px;
+	margin-bottom:0.5em;
+}
+.btn3
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	position:relative;
+	left:0em;
+	width: 150px;
+	margin-bottom:0.5em;
+}
+.timeoutMessage
+{
+    position: relative;
+    color:Red;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.errorMessage
+{
+	background-image: url(../Images/error.gif); 
+	background-repeat:no-repeat;
+	
+	position: relative;
+    color:Red;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	left: 2.5em;
+	padding-left:25px;
+	
+}
+.errorMessage1
+{
+	background-image: url(../Images/error.gif); 
+	background-repeat:no-repeat;
+	position: relative;
+    color:Red;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	
+	padding-left:25px;
+	
+}
+.headersmall
+{
+	position:relative;
+	color:#990000;
+	font-family:Verdana, Arial, Sans-Serif;
+	font-size: 125%;
+	font-weight: bold;	
+	margin-top:2em;
+}	
+
+/******* start style for Menu user control **********/
+
+#menu2
+{
+	width:961px;
+	border-style:none; 
+    border-color:black; 
+	border-width:1px;
+	text-align:right;
+}
+
+#menu2 ul
+{    
+	list-style:none
+}
+
+#menu2 li 
+ {
+    display: inline;
+    border-left: 0px solid;
+    padding-right:8;
+    padding-left:8;
+ }
+ 
+#menu2 ul.parentList
+{
+	text-align:left;
+    vertical-align:middle;
+    background-color:#333399;
+    color:White;
+    padding:4 4 4 4;
+	margin:0 0 0 0;
+}
+
+#menu2 ul.static
+{
+   border-left-style:none;
+   margin-left:445;
+   margin-bottom:1;
+   padding-left:0;
+}
+
+#menu2 ul.childList
+{
+
+    background-color:#cccfff;
+	margin:0 0 0 0;
+	color:Black;
+	padding:3 4 4 4;
+}
+
+#menu2 ul.parentList li a
+{
+    color:#FFCF00 ;
+}
+
+#menu2 ul.childList li a
+{
+    color:Black;
+}
+  
+#menu2 ul.parentList li.current a
+ {
+     font-weight:bold;
+     color:#FFCF00;    
+     text-decoration: none;
+ }
+ #menu2 ul.parentList li.fcurrent a
+ {
+     font-weight:bold;
+     color:#FFCF00;
+     text-decoration: none;
+ }
+ 
+ #menu2 ul.childList li.current
+ {
+     font-weight:bold;
+     text-decoration: none;
+ }
+ 
+ #menu2 li.fcurrent
+ {
+     font-weight:bold;
+     color:#FFCF00;
+     border-left-style:none;   
+     text-decoration: none;
+ }
+ #menu2 li.first
+ {
+     border-left-style:none;   
+ }
+ 
+ 
+ 
+ #menu2 li.currentCP
+ {
+     font-weight:bold;
+     border-left-style:none;   
+     padding-left:6em;
+     text-decoration: none;
+ }
+ 
+ #menu2 li.firstCP
+ {
+     padding-left:30em;
+     border-left-style:none; 
+ }
+ #menu2 li.secondCP
+ {
+     padding-left:48em;
+     border-left-style:none; 
+     font-weight:bold;
+ }
+ 
+#menu2 ul.parentList li.currentCP a
+ {
+     font-weight:bold;
+     color:#FFCF00;    
+     text-decoration: none;
+ }
+ #menu2 ul.childList li.currentCP
+ {
+     font-weight:bold;
+     text-decoration: none;
+ }
+ #toolsmenu li 
+{
+    display: inline;
+}
+#toolsmenu ul.parentList
+{
+    text-align:left;
+    background-color:#EFF3FF;
+    color:#333399;
+    padding: 4 4 4 4;
+	margin:0 0 0 0;
+}
+#toolsmenu ul.parentList li a
+{
+    color:#333399;
+}
+#toolsmenu ul.parentList li.current a
+ {
+     font-weight:bold;
+     color:#333399;  
+ }
+ 
+ 
+ 
+/* DateSelection Starts*/
+
+
+
+input.DateFrom{ width:152px; font-size:11px; float:left; }
+
+input.DateTo{ width:167px; font-size:11px; float:left; }
+
+select.UnitList{ width:167px; font-size:11px; float:left; margin-top:0px; }
+
+select.SelectedAgency{ width:167px; font-size:11px; float:left; margin-top:0px; }
+
+input.SelectedAgency{ width:167px; font-size:11px; float:left; margin-top:100px; }
+
+input.SelectedAgency{ width:167px; font-size:11px; float:left; margin-top:100px; }
+
+label.labelFeedback {font-family: Verdana, Arial, Sans-Serif; vertical-align: top; text-align:left; position:relative}
+
+input.DateTo{ width:167px; font-size:11px; float:left }
+
+input.searchButton{ margin-left:5px; margin-top:0px }
+
+input.updateRankingButton {margin-left:22px; margin-top:10px;font-family: Verdana, Arial, Sans-Serif;}
+
+input.button{ margin-left:5px; margin-top:1px ; font-family: Verdana, Arial, Sans-Serif;}
+
+input.subscribeButton{ margin-left:5px; margin-top:0px }
+
+input.DateFromText{ width:152px; font-size:11px; float:left }
+
+#Search{ font-size:8pt; text-align:left; margin-left:0px; float:left; display:inline;}
+
+#Searchlabel a{ font-size:8pt;  }
+
+#Unit{ font-size:8pt; text-align:left; margin-left:25px; float:left; display:inline;}
+
+#ToDateDiv{ font-size:8pt; text-align:left; margin-left:0px; float:left; margin-bottom:0px;display:inline;}
+
+#FromDateDiv{ font-size:8pt; text-align:left; margin-left:0px; width:230px; height:35px; float:left; margin-bottom:0px; display:inline;}
+
+#Search{ font-size:8pt; text-align:left; margin-left:0px; float:left; display:inline;}
+
+#Subscribe{ font-size:8pt; text-align:left; margin-left:0px; width:230px; height:35px; float:left; margin-bottom:0px; display:inline;}
+
+#AgencyDiv{ font-size:8pt; text-align:left; margin-left:0px; float:left; display:inline;}
+
+#URLContainsDiv{ font-size:8pt; text-align:left; margin-left:0px; width:230px; height:35px; float:left; margin-bottom:0px; display:inline;}
+
+#SubscribeForm{ padding-top:2px }
+
+
+/* DateSelection Ends*/
+
+
+/********* end style for user control **********/

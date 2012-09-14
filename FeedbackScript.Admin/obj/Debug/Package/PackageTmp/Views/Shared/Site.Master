@@ -1,0 +1,149 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function NoSubmission() {
+            return !(window.event && window.event.keyCode == 13);
+        }
+    </script>
+
+    <script type="text/javascript">
+        function ClearDate() {
+            document.getElementById('calcontainerFrom').style.display = 'none';
+            document.getElementById('calcontainerTo').style.display = 'none';
+        }
+    </script>
+    
+    <script type="text/javascript">
+        begin = document.cookie.indexOf("FirstTime=");
+        if (begin == -1) {
+            alert('!!! WARNING  !!! \n\nThis is Department of Labor computer system.\nDOL computer systems are provided for the processing of Official U.S. Government information only. All information contained on DOL computer systems is owned by the Department of Labor and may be monitored, intercepted, recorded, read copied or captured in any manner and disclosed in any manner by authorized personnel.\nTHERE IS NO RIGHT OF PRIVACY IN THIS SYSTEM.\nSystem personnel may give to law enforcement official any potential evidence of crime found on Department of Labor computing system. USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED CONSTITUTES CONSENT TO THIS MONITORING, INTERCEPTION, RECORDING, READING, COPYING OR CAPTURING AND DISCLOSURE., Authorized users is responsible for the proper handling of the Government data equipment and resource which they access.');
+            document.cookie = "FirstTime=Yes";
+        }
+        //alert(document.cookie);
+        
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../Content/carousel.css" />
+    <script type="text/javascript" src="../../Content/carousel-beta-min.js"></script>
+
+    <style type="text/css"> 
+        
+        #calcontainerFrom { display:none; position:absolute; left:160px; top:225px; z-index:2}
+	    #calcontainerTo { display:none; position:absolute; left:412px; top:225px; z-index:2}
+    </style> 
+    <%
+        string mAction = ViewContext.RouteData.Values["Action"].ToString();
+        if (mAction.Contains("Trends") & ViewData["graphData"] != null) {%>
+            <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+            <script type="text/javascript">
+                google.load('visualization', '1', { packages: ['corechart'] });
+            </script>
+            <script type="text/javascript">
+                function drawVisualization() {
+                // Create and populate the data table.
+                var data = new google.visualization.DataTable();
+                    <%=ViewData["graphData"] %>
+                        // Create and draw the visualization.
+                new google.visualization.LineChart(document.getElementById('visualization')).
+                draw(data, { curveType: "function",
+                    width: 1000, height: 400,
+                    vAxis: { maxValue: <%=ViewData["MaxRecSizeVolFeedBack"]%>}
+                    });
+                }
+                google.setOnLoadCallback(drawVisualization);
+            </script>
+           <%} %>
+
+    <script type="text/javascript">
+
+        function addDateFrom(type, args, obj) {
+            var datedata = args[0][0];
+            var year = datedata[0];
+            var month = datedata[1];
+            var day = datedata[2];
+            document.forms[0].txtDateFrom.value = month + '/' + day + '/' + year;
+            obj.hide();
+        }
+
+        function addDateTo(type, args, obj) {
+            var datedata = args[0][0];
+            var year = datedata[0];
+            var month = datedata[1];
+            var day = datedata[2];
+            document.forms[0].txtDateTo.value = month + '/' + day + '/' + year;
+            obj.hide();
+        }
+
+        function init_calendar() {
+            var calcontainerFrom = new YAHOO.widget.Calendar("calcontainerFrom", { title: "Choose a date:", close: false});
+            calcontainerFrom.render();
+            calcontainerFrom.hide();
+
+
+            YAHOO.util.Event.addListener("dateImgFrom", "focus", calcontainerFrom.show, calcontainerFrom, true);
+
+            // Save calendar value inside text field
+            calcontainerFrom.selectEvent.subscribe(addDateFrom, calcontainerFrom, true);
+
+
+            var calcontainerTo = new YAHOO.widget.Calendar("calcontainerTo", { title: "Choose a date:", close: false});
+            calcontainerTo.render();
+            calcontainerTo.hide();
+
+
+            YAHOO.util.Event.addListener("dateImgTo", "focus", calcontainerTo.show, calcontainerTo, true);
+
+            // Save calendar value inside text field
+            calcontainerTo.selectEvent.subscribe(addDateTo, calcontainerTo, true);
+        }
+        YAHOO.util.Event.onDOMReady(init_calendar);
+    </script>
+
+    <%
+     Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));//added for firefox
+    //Response.Cache.SetCacheability(HttpCacheability.NoCache);
+    //Response.Cache.SetNoStore();//added for firefox
+    Response.Cache.SetNoServerCaching();
+    //Response.CacheControl = "no-cache";
+    Response.AddHeader("Pragma", "no-cache");
+    Response.Expires = -1;
+    Response.Cache.SetCacheability(HttpCacheability.Public);
+    Response.Cache.SetExpires(DateTime.Now.AddSeconds(500));
+    Response.Cache.SetSlidingExpiration(true);
+ %>
+</head>
+<body  class="yui-skin-sam">
+    <a href="#content"><img src="http://www.dol.gov/images/skip.gif" alt="skip navigational links" width="0" height="75" border="0" hspace="0" vspace="0" align="left" /></a>        
+    <img id="Img1" runat="server" src="~/images/FeedbackScript.jpg" style="height:85px;width:960px;border-width:0px;display:block;" alt="Feedback Script Header Logo"  /> 
+<div id="menu2" >   
+        <!--<div id="static">     
+            <a href="#">Change Password</a> | <a href="UserManual.pdf" target="_">Help</a> | <a href="#">Log Out</a> 
+        </div> -->
+        <div id="static">
+            <!-- Bookmarklet: -->
+            <%// string.Format("<a title='Short URL. \nDrag to your bookmarks to quickly shorten URLs.' href=\"javascript:var d=document,f='{0}://{1}{2}?',l=d.location,e=encodeURIComponent,p='url='+e(l.href);1;a=function()%20{{if%20(!window.open(f+p,'sharer','toolbar=0,status=0,resizable=0,width=526,height=256'))l.href=f+p}};if%20(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else{{a()}}void(0)\">Short URL</a>", Request.Url.Scheme, Request.Url.Authority, Url.Action("Addlet", "Urls"))%>
+        </div>
+
+        <%string mAction = ViewContext.RouteData.Values["Action"].ToString();
+        %>
+		<div id="Div1">   
+			<ul class="parentList"> 
+				<li class="<%= mAction.Contains("Top") ? "current" : "" %>"><a href="../Reports/Toptenpages">Top 10 DOL Pages</a></li>	
+                | <li class="<%= mAction.Contains("Summary") ? "current" : "" %>"><a href="../Reports/Summary">Summary</a></li> 
+                | <li class="<%= mAction.Contains("Search") ? "current" : "" %>"><a href="../Reports/Search">Search</a></li> 
+                | <li class="<%= mAction.Contains("Trends") ? "current" : "" %>"><a href="../Reports/Trends">Trends</a></li>   
+			</ul>
+		</div>
+</div>
+        
+    <a name="content"></a> 
+    <!-- START CONTENT HERE  *************************************************** --> 
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <!-- END CONTENT HERE  *************************************************** --> 
+    <br /> 
+    <div id="footer">U.S. Department of Labor - Feedback Script</div> 
+</body>
+</html>

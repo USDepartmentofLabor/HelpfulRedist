@@ -1,0 +1,5 @@
+C:\ASPCK\GIT\FeedbackScript\Helpful.Public\bin\Helpful.Public.dll
+C:\ASPCK\GIT\FeedbackScript\Helpful.Public\bin\Helpful.Public.pdb
+C:\ASPCK\GIT\FeedbackScript\Helpful.Public\obj\Debug\ResolveAssemblyReference.cache
+C:\ASPCK\GIT\FeedbackScript\Helpful.Public\obj\Debug\Helpful.Public.dll
+C:\ASPCK\GIT\FeedbackScript\Helpful.Public\obj\Debug\Helpful.Public.pdb

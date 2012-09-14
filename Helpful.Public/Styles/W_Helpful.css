@@ -1,0 +1,105 @@
+﻿#W_Helpful_question_Link
+{
+	text-decoration: none;
+	float:left;
+	color:#000!important;
+}
+
+#W_Helpful_question_Div
+{
+	width:180px;
+	font-size:12px
+}
+#W_Helpful_Star
+{
+	background-color:ffffcc;
+	float:left
+}
+#W_Helpful_yesORno
+{
+	width:150px;
+	padding:10px;
+	background-color:#FAF8CC;
+	border: 1px solid #D8D5D4;
+	border-top: none;
+	position:absolute
+}
+#W_Helpful_yes
+{
+	border: 1px solid  #ccc;
+	width:50px;
+	float:left;
+	margin-left:20px;
+	background-color:white;	
+	align:center;
+}
+#W_Helpful_no
+{
+	border: 1px solid  #ccc;
+	width:50px;
+	float:left;
+	margin-left:15px;
+	background-color:white;
+	align:center;
+	
+}
+#W_Helpful_comment
+{
+	width:150px;
+	padding:10px;
+	background-color:#FAF8CC;
+	border: 1px solid #D8D5D4;
+	border-top: none;position:absolute;
+	z-index: 2;
+}
+#W_Helpful_helpful-input
+{
+	height:110px;
+	width:140px;
+	padding:5px;
+	border:1px solid #888;
+	overflow:auto;
+}
+#W_Helpful_comment-submit
+{
+	width:70px;
+	background-color:white;
+	text-align:center;
+}
+#W_Helpful_comment-skip
+{
+	width:70px;
+	background-color:white;
+	text-align:center;
+}
+#W_Helpful_confirm
+{
+	width:150px;
+	padding:10px;
+	background-color:#FAF8CC;
+	border: 1px solid #D8D5D4; 
+	border-top: none;
+	position:absolute;
+	z-index: 2;
+}
+hr
+{
+	width=150px
+}
+#xyzYes
+{
+	font-size:12px;
+	margin-top:-10px;
+	padding-left:5px;"
+}
+#xyzNo
+{
+	font-size:12px;
+	margin-top:-10px;
+	padding-left:5px;"
+}
+p.feedback
+{
+	font-size:12px;
+	text-align:Center
+}
